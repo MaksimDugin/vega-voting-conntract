@@ -188,4 +188,3 @@ forge script script/CastVote.s.sol:CastVote --rpc-url "$RPC_URL" --broadcast -vv
 * early finalize происходит автоматически внутри `vote()`, если достигнут threshold.
 * результат фиксируется NFT и не может быть изменён.
 
-```
