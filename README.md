@@ -107,9 +107,9 @@ export ADMIN_PRIVATE_KEY="0x..."
 export VOTER1_PRIVATE_KEY="0x..."
 export VOTER2_PRIVATE_KEY="0x..."
 
-export VV_TOKEN_ADDRESS="0x..."
-export VOTING_ADDRESS="0x..."
-export RESULT_NFT_ADDRESS="0x..."
+export VV_TOKEN_ADDRESS="0xA69738450198A56a9bBDdF1484E2f6E7e5541509"
+export RESULT_NFT_ADDRESS="0xE52B50aCb5485b8823874762FA781b4faD6edd0f"
+export VOTING_ADDRESS="0x792da4b59575a24cbE7D50606dB5673CaBf56535"
 
 export VOTE_ID="0x1111111111111111111111111111111111111111111111111111111111111111"
 export DESCRIPTION="Should VegaVoting proposal #1 pass?"
@@ -171,6 +171,12 @@ forge script script/CastVote.s.sol:CastVote --rpc-url "$RPC_URL" --broadcast -vv
 * Voting contract: `https://sepolia.etherscan.io/address/<VOTING_ADDRESS>`
 * Token contract: `https://sepolia.etherscan.io/address/<VV_TOKEN_ADDRESS>`
 * NFT contract: `https://sepolia.etherscan.io/address/<RESULT_NFT_ADDRESS>`
+
+Например:
+
+* Voting contract: `https://sepolia.etherscan.io/address/0x792da4b59575a24cbE7D50606dB5673CaBf56535`
+* Token contract: `https://sepolia.etherscan.io/address/0xA69738450198A56a9bBDdF1484E2f6E7e5541509`
+* NFT contract: `https://sepolia.etherscan.io/address/0xE52B50aCb5485b8823874762FA781b4faD6edd0f`
 
 На вкладке **Events** должны быть видны события:
 
