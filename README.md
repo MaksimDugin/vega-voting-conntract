@@ -232,20 +232,6 @@ forge script script/CastVote.s.sol:CastVote --rpc-url "$RPC_URL" --broadcast -vv
 4. **Ops layer**: Foundry scripts для деплоя, голосования и реплицируемых демо-flow.
 
 
-
-
-## Частые ошибки (по реальному запуску)
-
-1. `stake(..., 7)` -> `InvalidDuration`: допустимо только `1..4` дня.
-2. `cast call $VOTING "stakes(address)" ...` не сработает: `stakes` приватный mapping. Используйте:
-   - `stakeCount(address)`
-   - `getStake(address,uint256)`
-3. `createVote(string,uint256)` не существует. Верная сигнатура:
-   - `createVote(bytes32,uint64,uint256,string)`
-4. `getVoteCount()` теперь доступен как helper (и `voteIdAt(index)`).
-5. `tokenOfOwnerByIndex(...)` работает, потому что `VoteResultNFT` поддерживает enumerable.
-6. `finalizeVote` может ревертить `VoteAlreadyFinalized`, потому что контракт финализирует vote автоматически в `vote()` при `yesVotes >= threshold`.
-
 ### Минимальный ручной сценарий через cast (2 участника)
 
 ```bash
